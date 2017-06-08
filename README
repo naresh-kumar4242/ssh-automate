@@ -1,0 +1,20 @@
+My first official project ::: To automate the ssh into a remote server using python
+This is my first little project in Python :)
+It automates the following steps:
+
+    - SSH into it (Ubuntu VM) with normal user(in my case with user naresh)
+      We will be doing passwordless login to ubuntu VM.We generated SSH keys on our client & uploaded rsa_public key
+      on server.We will authenticate once with simple ssh.
+    
+    - Install following packages
+    - sudo apt-get install tree
+    - sudo apt-get install cowsay   
+    - prints the output of cowsay command
+    
+    - Add a user mayank | Give it some password
+    - login with user mayank
+    - Make dir testdir & touch a file testfile in mayank's home
+    - log-out mayank 
+    - Finally, power-off the system
+
+-Dr z0x 
