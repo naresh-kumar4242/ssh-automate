@@ -1,7 +1,7 @@
 #!/usr/bin/python
 '''
 
-24 Feb 2017 | 3PM
+June 20 2017 | 3PM
 My first official project ::: To automate the ssh into a remote server using python
 This is my first little project in Python :)
 It automates the following steps:
@@ -66,19 +66,19 @@ def sshvm(servers,packages):
                 print s.before
                 
                 '''
+In case, We want to check whether a package is installed or not before installing :::
                 s.sendline('dpkg --get-selections | grep %s'%package)
                 s.prompt()
                 print s.before
                 match = re.search(r'\sinstall',s.before)
                 if match:
                     print "Already installed\n"
-                   else:
+                else:
                     s.sendline('sudo apt-get install %s'%package)
-                    #s.sendline(getpass.getpass('Authorize yourself: '))
                     s.prompt()
                     print "%s package successfully installed"%package
              
-            
+       Or We can use :::     
                 if 'install' in s.before:
                     print "Already installed\n"
                 else:
@@ -94,9 +94,10 @@ def sshvm(servers,packages):
                 s.sendline('cowsay Mayank says DevOps is amazing! ')
                 s.prompt()
                 print s.before
+                
                 '''
+                
                 s.sendline('sudo useradd -m mayank')
-                #s.sendline(password)
                 s.prompt()
                 print "User mayank created "
             
@@ -122,7 +123,6 @@ def sshvm(servers,packages):
                 s.sendline('logout')
                 
                 s.sendline('sudo poweroff')
-                #s.sendline()
                 s.logout()
                 s.close()
 
@@ -132,7 +132,7 @@ def sshvm(servers,packages):
         
 def main():
     if not sys.argv[1:]:
-        print "Usage: [ username@serverIPaddress ]"
+        print "Usage: [ username@serverIPaddress ] or use file to connect to multiple servers"
         sys.exit(1)
     #(username,ip) = sys.argv[1].split('@')
     #print username
