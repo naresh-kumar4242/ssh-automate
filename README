@@ -1,15 +1,13 @@
-My first official project ::: To automate the ssh into a remote server using python
+My first official project ::: To automate the ssh into multiple remote servers using python
 This is my first little project in Python :)
-It automates the following steps:
+It automates the following steps :::
 
-    - SSH into it (Ubuntu VM) with normal user(in my case with user naresh)
-      We will be doing passwordless login to ubuntu VM.We generated SSH keys on our client & uploaded rsa_public key
-      on server.We will authenticate once with simple ssh.
-    
-    - Install following packages
-    - sudo apt-get install tree
-    - sudo apt-get install cowsay   
-    - prints the output of cowsay command
+    - SSH into Ubuntu VMs with normal user(in my case with user naresh)
+#We will be doing passwordless login to ubuntu VM.We generated SSH keys on our client & uploaded rsa_public key on server.We will authenticate once with simple ssh.
+    - We will be taking Servers file(Contains UserNames & IPs of servers) & Packages file as command line arguments.   
+    - First We install elinks standalone.
+    - The we install all the packages as given in the file (tree,oneko,cowsay,nano,cmatrix) 
+    # Here we also check whether the packages are already installed or not
     
     - Add a user mayank | Give it some password
     - login with user mayank
@@ -19,5 +17,4 @@ It automates the following steps:
 
 -Dr z0x 
 
-Mods ::
-Now we can login to multiple servers & install packages to all of them 
+Mods :: Now we can login to multiple servers & install packages to all of them individually.
