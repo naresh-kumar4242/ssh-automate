@@ -1,3 +1,5 @@
+Maintained Idempotency of script, just like the way Ansible does 
+
 My first official project ::: To automate the ssh into multiple remote servers using python
 This is my first little project in Python :)
 It automates the following steps :::
